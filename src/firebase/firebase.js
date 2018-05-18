@@ -3,6 +3,9 @@
 import * as firebase from 'firebase';
 //create object containing all named function in firebasemodule and use like firebase.something
 
+
+
+
 const config = { //from firebase (connect to webapp)
     apiKey: "AIzaSyCJoSOvvyRjtLZIQvOqo77Hda5lss6ZzUc",
     authDomain: "expensify-2nd.firebaseapp.com",
@@ -14,8 +17,10 @@ const config = { //from firebase (connect to webapp)
 
 firebase.initializeApp(config);
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export { firebase, database as default };
+
+export { firebase, googleAuthProvider,  database as default };
 
 
 
